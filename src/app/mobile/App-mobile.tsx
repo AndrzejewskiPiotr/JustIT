@@ -1,9 +1,12 @@
 import React from 'react';
-import { Container } from './app-styled';
+
 import Header from 'common/Header/Header';
+import { Container } from './app-styled';
+import { GlobalStyled } from 'globalStyled/app-styled';
 
 const App = (): JSX.Element => (
   <Container>
+    <GlobalStyled />
     <Header>
       <span>dfdfdfd</span>
     </Header>
