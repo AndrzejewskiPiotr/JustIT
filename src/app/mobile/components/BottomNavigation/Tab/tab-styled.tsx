@@ -1,5 +1,13 @@
 import styled from 'styled-components';
+import CommonText from 'common/Text/Text';
+import CommonHomeIcon from 'common/Svg/Home/Home-svg';
 
 const Wrapper = styled.div``;
 
-export { Wrapper };
+const Text = styled(CommonText)`
+  text-transform: uppercase;
+`;
+
+const HomeIcon = styled(CommonHomeIcon)``;
+
+export { Wrapper, Text, HomeIcon };
