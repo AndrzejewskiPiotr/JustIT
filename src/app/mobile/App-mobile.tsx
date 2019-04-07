@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { Container, Header, Heading } from './app-styled';
+import HeaderView from 'mobile/views/Header/Header-component';
+import { Container } from './app-styled';
 import { GlobalStyled } from 'globalStyled/app-styled';
 
 const App = (): JSX.Element => (
   <Container>
     <GlobalStyled />
-    <Header>
-      <Heading text="justjoin.it" />
-    </Header>
+    <HeaderView />
   </Container>
 );
 
