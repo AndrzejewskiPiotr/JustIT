@@ -1,11 +1,21 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 
-import { Wrapper, Text, HomeIcon } from './tab-styled';
+import { Wrapper, Text } from './tab-styled';
 
-const Tab: FunctionComponent = () => (
-  <Wrapper>
-    <HomeIcon />
-    <Text text="Home" />
+interface IProps {
+  text: string;
+  children: ReactNode;
+  className?: string;
+}
+
+const Tab: FunctionComponent<IProps> = ({
+  text,
+  children,
+  ...rest
+}): JSX.Element => (
+  <Wrapper {...rest}>
+    {children}
+    <Text text={text} />
   </Wrapper>
 );
 
