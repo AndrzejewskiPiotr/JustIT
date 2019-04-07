@@ -5,7 +5,7 @@ interface IProps {
   className?: string;
 }
 
-const CommonHomeIcon: FunctionComponent<IProps> = ({ color, ...rest }) => (
+const CommonFilterIcon: FunctionComponent<IProps> = ({ color, ...rest }) => (
   <svg width="40px" height="40px" viewBox="0 0 30 30" version="1.1" {...rest}>
     <defs>
       <path
@@ -35,4 +35,4 @@ const CommonHomeIcon: FunctionComponent<IProps> = ({ color, ...rest }) => (
   </svg>
 );
 
-export default CommonHomeIcon;
+export default CommonFilterIcon;

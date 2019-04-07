@@ -25,7 +25,7 @@ const CommonWorldIcon: FunctionComponent<IProps> = ({ color, ...rest }) => (
           <mask id="mask-2" fill="white">
             <use href="#path-1" />
           </mask>
-          <use id="Fill-1" fill="#262424" fill-rule="evenodd" href="#path-1" />
+          <use id="Fill-1" fill="#262424" fillRule="evenodd" href="#path-1" />
           <g
             id="00-Tint/10Black"
             mask="url(#mask-2)"
