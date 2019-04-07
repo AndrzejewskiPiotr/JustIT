@@ -12,7 +12,7 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "2.3.0",
-    "styled-components": "4.1.0",
+    "styled-components": "4.2.0",
     "typescript": "3.1.1"
   },
   "scripts": {
@@ -55,7 +55,7 @@
     "@types/react-router-dom": "4.3.1",
     "@types/react-test-renderer": "16.8.1",
     "@types/recompose": "0.30.5",
-    "@types/styled-components": "^4.1.12",
+    "@types/styled-components": "^4.1.13",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "3.3.5",

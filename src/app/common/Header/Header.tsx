@@ -7,9 +7,9 @@ interface IProps {
   className?: string;
 }
 
-const Header: FunctionComponent<IProps> = ({
+const CommonHeader: FunctionComponent<IProps> = ({
   children,
   ...rest
 }): JSX.Element => <Element {...rest}>{children}</Element>;
 
-export default Header;
+export default CommonHeader;

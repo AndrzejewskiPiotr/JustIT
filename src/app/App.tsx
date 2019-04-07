@@ -12,6 +12,6 @@ export default compose(
   branch(
     (): boolean => isTablet,
     renderComponent(TabletApp),
-    isMobile ? renderComponent(MobileApp) : renderComponent(DesktopApp),
-  ),
+    isMobile ? renderComponent(MobileApp) : renderComponent(DesktopApp)
+  )
 )(App);
