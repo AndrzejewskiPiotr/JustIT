@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { Container } from './headerNavigation-styled';
+import Tabs from './Tab/Tab-component';
 
-const HeaderNavigation = () => <Container>sdfds</Container>;
+const HeaderNavigation: FunctionComponent = (): JSX.Element => (
+  <Container>
+    <Tabs to="offers" text="job offers" />
+    <Tabs to="favourite-offers" text="favourite offers" />
+  </Container>
+);
 
 export default HeaderNavigation;
