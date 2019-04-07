@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import CommonText from 'common/Text/Text';
-import CommonHomeIcon from 'common/Svg/Home/Home-svg';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,8 +14,4 @@ const Text = styled(CommonText)`
   align-self: center;
 `;
 
-const HomeIcon = styled(CommonHomeIcon)`
-  align-self: center;
-`;
-
-export { Wrapper, Text, HomeIcon };
+export { Wrapper, Text };
