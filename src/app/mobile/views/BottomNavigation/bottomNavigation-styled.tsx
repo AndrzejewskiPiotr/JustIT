@@ -13,6 +13,7 @@ const Container = styled.div`
   width: 100%;
   color: black;
   background-color: ${COLOR.BACKGROUND_COLOR_2};
+  box-shadow: ${COLOR.BOX_SHADOW_NAVIGATION};
   margin-top: 0.5px;
   height: 56px;
 `;
