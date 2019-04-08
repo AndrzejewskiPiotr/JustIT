@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import CommonText from 'common/Text/Text';
+import CommonLink from 'common/Link/Link'
 
-const Wrapper = styled.div`
+const WrapperLink = styled(CommonLink)`
   display: flex;
   flex-flow: column;
   flex: 1;
@@ -14,4 +15,4 @@ const Text = styled(CommonText)`
   align-self: center;
 `;
 
-export { Wrapper, Text };
+export { WrapperLink, Text };

@@ -1,8 +1,9 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 
-import { Wrapper, Text } from './tab-styled';
+import { WrapperLink, Text } from './tab-styled';
 
 interface IProps {
+  to: string,
   text: string;
   children: ReactNode;
   className?: string;
@@ -13,10 +14,10 @@ const Tab: FunctionComponent<IProps> = ({
   children,
   ...rest
 }): JSX.Element => (
-  <Wrapper {...rest}>
+  <WrapperLink {...rest}>
     {children}
     <Text text={text} />
-  </Wrapper>
+  </WrapperLink>
 );
 
 export default Tab;
