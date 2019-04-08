@@ -4,12 +4,15 @@ import { Wrapper, Link } from './tab-styled';
 interface IProps {
   to: string;
   text: string;
-  classNameActive?: string;
+  classnameactive?: string;
 }
 
-const Tabs: React.FunctionComponent<IProps> = ({ text, to }): JSX.Element => (
+const Tabs: React.FunctionComponent<IProps> = ({
+  text,
+  ...rest
+}): JSX.Element => (
   <Wrapper>
-    <Link href={to}>{text}</Link>
+    <Link {...rest}>{text}</Link>
   </Wrapper>
 );
 

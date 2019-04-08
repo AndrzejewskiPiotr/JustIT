@@ -3,7 +3,7 @@ import React, { FunctionComponent, ReactNode } from 'react';
 import { WrapperLink, Text } from './tab-styled';
 
 interface IProps {
-  to: string,
+  to: string;
   text: string;
   children: ReactNode;
   className?: string;

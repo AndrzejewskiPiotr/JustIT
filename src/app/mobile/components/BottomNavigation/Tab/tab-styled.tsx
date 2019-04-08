@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import CommonText from 'common/Text/Text';
-import CommonLink from 'common/Link/Link'
+import CommonLink from 'common/Link/Link';
 
 const WrapperLink = styled(CommonLink)`
   display: flex;
