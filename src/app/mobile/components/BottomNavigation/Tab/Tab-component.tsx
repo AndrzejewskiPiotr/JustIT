@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 
-import { WrapperLink, Text } from './tab-styled';
+import { WrapperLink, Text } from './Tab-styled';
 
 interface IProps {
   to: string;

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 
-import { Element } from './header-styled';
+import { Element } from './Header-styled';
 
 interface IProps {
   children: ReactNode;

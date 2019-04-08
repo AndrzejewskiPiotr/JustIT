@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNode } from 'react';
-import { Element } from './link-styled';
+import { Element } from './Link-styled';
 
 interface IProps {
   to: string;

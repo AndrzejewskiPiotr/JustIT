@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-import { Element } from './heading-styled';
+import { Element } from './Heading-styled';
 
 interface IProps {
   text: string;

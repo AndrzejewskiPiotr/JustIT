@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-import { Container } from './headerNavigation-styled';
+import { Container } from './HeaderNavigation-styled';
 import Tabs from './Tab/Tab-component';
 
 const HeaderNavigation: FunctionComponent = (): JSX.Element => (

@@ -6,7 +6,7 @@ import {
   FilterIcon,
   LanguageIcon,
   WorldIcon
-} from './bottomNavigation-styled';
+} from './BottomNavigation-styled';
 import Tab from 'mobile/components/BottomNavigation/Tab/Tab-component';
 
 const BottomNavigation: FunctionComponent = (): JSX.Element => (

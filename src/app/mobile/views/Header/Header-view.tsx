@@ -1,6 +1,6 @@
 import React, { FunctionComponent, Fragment } from 'react';
 import HeaderNavigation from 'mobile/components/HeaderNavigation/HeaderNavigation-component';
-import { Heading, Header } from './header-styled';
+import { Heading, Header } from './Header-styled';
 
 const HeaderView: FunctionComponent = (): JSX.Element => (
   <Fragment>

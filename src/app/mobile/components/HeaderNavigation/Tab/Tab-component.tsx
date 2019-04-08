@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrapper, Link } from './tab-styled';
+import { Wrapper, Link } from './Tab-styled';
 
 interface IProps {
   to: string;

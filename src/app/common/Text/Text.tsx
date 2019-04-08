@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element } from './text-styled';
+import { Element } from './Text-styled';
 
 interface IProps {
   text: string;

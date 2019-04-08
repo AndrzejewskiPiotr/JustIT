@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from './app-styled';
+import { Container } from './App-styled';
 
 const App = () => <Container>tablet</Container>;
 
