@@ -3,36 +3,36 @@ import {
   REQUEST_JOBS,
   RECEIVE_JOBS,
   JobsActionTypes,
-  REQUEST_JOBS_ERROR
+  REQUEST_JOBS_ERROR,
 } from './jobs-types';
 
 const initialState: IJobsState = {
   jobs: [],
   isLoading: false,
-  error: false
+  error: false,
 };
 
 const jobsReducer = (
   state = initialState,
-  action: JobsActionTypes
+  action: JobsActionTypes,
 ): IJobsState => {
   switch (action.type) {
     case REQUEST_JOBS:
       return {
         ...state,
-        isLoading: true
+        isLoading: true,
       };
     case RECEIVE_JOBS:
       return {
         ...state,
         jobs: action.data,
-        isLoading: false
+        isLoading: false,
       };
     case REQUEST_JOBS_ERROR:
       return {
         ...state,
         isLoading: false,
-        error: true
+        error: true,
       };
     default:
       return state;

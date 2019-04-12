@@ -5,7 +5,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import jobsReducer from 'redux/jobs/jobs-reducer';
 
 const rootReducer = combineReducers({
-  jobsReducer
+  jobsReducer,
 });
 
 export type AppState = ReturnType<typeof rootReducer>;
@@ -16,7 +16,7 @@ export default function configureStore() {
 
   const store = createStore(
     rootReducer,
-    composeWithDevTools(middleWareEnhancer)
+    composeWithDevTools(middleWareEnhancer),
   );
 
   return store;

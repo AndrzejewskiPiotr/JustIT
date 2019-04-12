@@ -5,7 +5,7 @@ import {
   HomeIcon,
   FilterIcon,
   LanguageIcon,
-  WorldIcon
+  WorldIcon,
 } from './BottomNavigation-styled';
 import Tab from 'mobile/components/BottomNavigation/Tab/Tab-component';
 

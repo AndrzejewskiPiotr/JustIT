@@ -1,29 +1,30 @@
 import { Action } from 'redux';
 import { ThunkAction } from 'redux-thunk';
+import { AppState } from 'store/store';
 import {
   REQUEST_JOBS_ERROR,
   RECEIVE_JOBS,
   REQUEST_JOBS,
-  IJobs
+  IJobs,
 } from './jobs-types';
 
 const requestJobs = () => ({
-  type: REQUEST_JOBS
+  type: REQUEST_JOBS,
 });
 
 const receiveJobs = (data: IJobs) => ({
   type: RECEIVE_JOBS,
-  data
+  data,
 });
 
 const catchError = (error: any) => ({
   type: REQUEST_JOBS_ERROR,
-  error
+  error,
 });
 
 export const thunkSendMessage = (): ThunkAction<
   void,
-  null,
+  AppState,
   null,
   Action<string>
 > => async dispatch => {
