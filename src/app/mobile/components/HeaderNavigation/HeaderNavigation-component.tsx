@@ -5,7 +5,11 @@ import Tabs from './Tab/Tab-component';
 
 const HeaderNavigation: FunctionComponent = (): JSX.Element => (
   <Container>
-    <Tabs to="/" text="job offers" classnameactive="active" />
+    <Tabs
+      to="/"
+      text="job offers"
+      classnameactive="active"
+    />
     <Tabs
       to="/favourite-offers"
       text="favourite offers"
