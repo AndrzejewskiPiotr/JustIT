@@ -10,7 +10,7 @@ import {
   BrowserRouter as Router,
   Redirect,
   Route,
-  Switch
+  Switch,
 } from 'react-router-dom';
 
 const Elo = () => <div>test</div>;
@@ -21,7 +21,7 @@ const Hey = () => <div>map</div>;
 const mapStateToProps = (state: AppState) => ({
   jobs: state.jobsReducer.jobs,
   isLoading: state.jobsReducer.isLoading,
-  error: state.jobsReducer.error
+  error: state.jobsReducer.error,
 });
 
 interface IProps {
@@ -54,5 +54,5 @@ const App: FunctionComponent<IProps> = ({ thunkSendMessage }): JSX.Element => {
 
 export default connect(
   mapStateToProps,
-  { thunkSendMessage }
+  { thunkSendMessage },
 )(App);
