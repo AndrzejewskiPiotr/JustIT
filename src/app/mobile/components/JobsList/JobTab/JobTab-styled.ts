@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   background-color: ${COLORS.BACKGROUND_COLOR_2};
   box-sizing: border-box;
   padding: 15px 5px;
+  margin: 5px 0;
 `;
 
 const ImageWrapper = styled.div`
@@ -37,8 +38,8 @@ const Row = styled.div`
 
 const Title = styled(CommonText)`
   color: ${COLORS.FONT_BLACK};
+  white-space: initial;
   font-size: 1rem;
-  white-space: nowrap;
   overflow: hidden;
   margin: 0 5px 0 0;
   font-weight: 600;
@@ -46,6 +47,7 @@ const Title = styled(CommonText)`
 
 const Salary = styled(CommonText)`
   color: ${COLORS.FONT_GREEN};
+  text-transform: uppercase;
   font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
@@ -53,8 +55,13 @@ const Salary = styled(CommonText)`
   font-weight: 600;
 `;
 
+const ExpRow = styled(Row)`
+  flex: 1;
+`;
+
 const ExpLevel = styled(CommonText)<IPropsExp>`
   background-color: ${props => props.backgroundColor};
+  align-self: flex-end;
   color: ${COLORS.FONT_WHITE};
   width: 60px;
   height: 30px;
@@ -64,4 +71,13 @@ const ExpLevel = styled(CommonText)<IPropsExp>`
   text-transform: capitalize;
 `;
 
-export { Wrapper, CompanyLogo, Row, Title, Salary, ExpLevel, ImageWrapper };
+export {
+  Wrapper,
+  CompanyLogo,
+  Row,
+  Title,
+  Salary,
+  ExpLevel,
+  ImageWrapper,
+  ExpRow,
+};

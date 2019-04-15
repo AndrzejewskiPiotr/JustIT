@@ -19,12 +19,6 @@ const Heyd = () => <div>favourites</div>;
 const Heyf = () => <div>languages</div>;
 const Hey = () => <div>map</div>;
 
-const mapStateToProps = (state: AppState) => ({
-  jobs: state.jobsReducer.jobs,
-  isLoading: state.jobsReducer.isLoading,
-  error: state.jobsReducer.error,
-});
-
 interface IProps {
   thunkSendMessage: () => any;
 }
@@ -54,6 +48,6 @@ const App: FunctionComponent<IProps> = ({ thunkSendMessage }): JSX.Element => {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   { thunkSendMessage },
 )(App);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import {
   Wrapper,
   CompanyLogo,
@@ -7,23 +7,43 @@ import {
   Salary,
   ExpLevel,
   ImageWrapper,
+  ExpRow,
 } from './JobTab-styled';
 import { getBackgroundColor } from 'utility/getExpLevelBackgoundColor';
 
-const JobTab = () => {
-  const backgroundColor = getBackgroundColor('mid');
+interface IProps {
+  key: string;
+  id: string;
+  experience: string;
+  title: string;
+  salaryFrom: number;
+  salaryTo: number;
+  logoUrl: string;
+  currency: string;
+}
+
+const JobTab: FunctionComponent<IProps> = ({
+  logoUrl,
+  currency,
+  salaryFrom,
+  salaryTo,
+  title,
+  experience,
+}) => {
+  const backgroundColor = getBackgroundColor(experience);
+  const salary = salaryFrom + ' - ' + salaryTo + ' ' + currency;
   return (
     <Wrapper>
       <ImageWrapper>
-        <CompanyLogo src="https://bucket.justjoin.it/offers/company_logos/thumb/b14fde3218991ca24c0a030945e9d084716cb161.png?1553502421" />
+        <CompanyLogo src={logoUrl} />
       </ImageWrapper>
       <Row>
-        <Title text="Front-end Developer" />
-        <Salary text="7 000 - 9 000 PLN" />
+        <Title text={title} />
+        <Salary text={salary} />
       </Row>
-      <Row>
-        <ExpLevel text="mid" backgroundColor={backgroundColor} />
-      </Row>
+      <ExpRow>
+        <ExpLevel text={experience} backgroundColor={backgroundColor} />
+      </ExpRow>
     </Wrapper>
   );
 };
