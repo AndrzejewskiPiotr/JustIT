@@ -4,9 +4,8 @@ import CommonText from 'common/Text/Text';
 import * as COLORS from 'globalStyled/app-colors';
 
 interface IPropsExp {
-    backgroundColor: string
-};
-
+  backgroundColor: string;
+}
 
 const Wrapper = styled.div`
   display: flex;
@@ -55,7 +54,7 @@ const Salary = styled(CommonText)`
 `;
 
 const ExpLevel = styled(CommonText)<IPropsExp>`
-  background-color: ${ props => props.backgroundColor};
+  background-color: ${props => props.backgroundColor};
   color: ${COLORS.FONT_WHITE};
   width: 60px;
   height: 30px;

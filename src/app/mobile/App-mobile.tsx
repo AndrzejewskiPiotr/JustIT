@@ -32,7 +32,7 @@ interface IProps {
 const App: FunctionComponent<IProps> = ({ thunkSendMessage }): JSX.Element => {
   useEffect(() => {
     thunkSendMessage();
-  }, []);
+  },        []);
 
   return (
     <Container>
