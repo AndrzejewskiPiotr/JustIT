@@ -8,6 +8,7 @@ const GlobalStyled = createGlobalStyle`
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
     color: ${COLORS.FONT_WHITE};
+    overflow-y: hidden;
     margin: 0;
     padding: 0;
   }
