@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useEffect } from 'react';
-import { AppState } from 'store/store';
 import { thunkSendMessage } from 'redux/jobs/jobs-actions';
 import { connect } from 'react-redux';
 import HeaderView from 'mobile/views/Header/Header-view';
@@ -26,7 +25,7 @@ interface IProps {
 const App: FunctionComponent<IProps> = ({ thunkSendMessage }): JSX.Element => {
   useEffect(() => {
     thunkSendMessage();
-  },        []);
+  }, []);
 
   return (
     <Container>

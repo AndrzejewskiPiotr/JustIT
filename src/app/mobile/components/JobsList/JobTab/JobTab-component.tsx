@@ -20,6 +20,7 @@ interface IProps {
   salaryTo: number;
   logoUrl: string;
   currency: string;
+  style?: React.CSSProperties;
 }
 
 const JobTab: FunctionComponent<IProps> = ({
@@ -29,11 +30,12 @@ const JobTab: FunctionComponent<IProps> = ({
   salaryTo,
   title,
   experience,
+  ...rest
 }) => {
   const backgroundColor = getBackgroundColor(experience);
   const salary = salaryFrom + ' - ' + salaryTo + ' ' + currency;
   return (
-    <Wrapper>
+    <Wrapper {...rest}>
       <ImageWrapper>
         <CompanyLogo src={logoUrl} />
       </ImageWrapper>
