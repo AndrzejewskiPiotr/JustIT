@@ -21,6 +21,7 @@ interface IProps {
 
 const JobTab: FunctionComponent<IProps> = ({ jobData, ...rest }) => {
   const {
+    id,
     salary_from,
     salary_to,
     company_logo_url,
@@ -33,7 +34,7 @@ const JobTab: FunctionComponent<IProps> = ({ jobData, ...rest }) => {
   return (
     <Wrapper
       to={{
-        pathname: title,
+        pathname: `/offers/${id}`,
         state: { data: jobData },
       }}
       {...rest}
