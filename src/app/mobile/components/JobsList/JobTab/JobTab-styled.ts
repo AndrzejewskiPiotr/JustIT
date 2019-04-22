@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import CommonImage from 'common/Image/Image';
 import CommonText from 'common/Text/Text';
+import CommonLink from 'common/Link/Link';
 import * as COLORS from 'globalStyled/app-colors';
 
 interface IPropsExp {
   backgroundColor: string;
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled(CommonLink)`
   display: flex;
   width: 100%;
   height: 86px;

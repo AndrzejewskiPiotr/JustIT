@@ -10,41 +10,43 @@ import {
   ExpRow,
 } from './JobTab-styled';
 import { getBackgroundColor } from 'utility/getExpLevelBackgoundColor';
+import { IJobs } from 'redux/jobs/jobs-types';
 
 interface IProps {
   key: string;
   id: string;
-  experience: string;
-  title: string;
-  salaryFrom: number;
-  salaryTo: number;
-  logoUrl: string;
-  currency: string;
   style?: React.CSSProperties;
+  jobData: IJobs;
 }
 
-const JobTab: FunctionComponent<IProps> = ({
-  logoUrl,
-  currency,
-  salaryFrom,
-  salaryTo,
-  title,
-  experience,
-  ...rest
-}) => {
-  const backgroundColor = getBackgroundColor(experience);
-  const salary = salaryFrom + ' - ' + salaryTo + ' ' + currency;
+const JobTab: FunctionComponent<IProps> = ({ jobData, ...rest }) => {
+  const {
+    salary_from,
+    salary_to,
+    company_logo_url,
+    experience_level,
+    title,
+    salary_currency,
+  } = jobData;
+  const backgroundColor = getBackgroundColor(experience_level);
+  const salary = `${salary_from} - ${salary_to} - ${salary_currency}`;
   return (
-    <Wrapper {...rest}>
+    <Wrapper
+      to={{
+        pathname: title,
+        state: { data: jobData },
+      }}
+      {...rest}
+    >
       <ImageWrapper>
-        <CompanyLogo src={logoUrl} />
+        <CompanyLogo src={company_logo_url} />
       </ImageWrapper>
       <Row>
         <Title text={title} />
         <Salary text={salary} />
       </Row>
       <ExpRow>
-        <ExpLevel text={experience} backgroundColor={backgroundColor} />
+        <ExpLevel text={experience_level} backgroundColor={backgroundColor} />
       </ExpRow>
     </Wrapper>
   );

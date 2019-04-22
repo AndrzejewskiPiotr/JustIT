@@ -10,11 +10,19 @@ import {
   BrowserRouter as Router,
   Redirect,
   Route,
+  RouteComponentProps,
   Switch,
 } from 'react-router-dom';
 
+interface IMatchParams {
+  id: string;
+}
+
 const Elo = () => <JobsList />;
-const Heyd = () => <div>favourites</div>;
+const Heyd = ({ match }: RouteComponentProps<IMatchParams>) => {
+  console.log(match);
+  return <div>czzx</div>;
+};
 const Heyf = () => <div>languages</div>;
 const Hey = () => <div>map</div>;
 
@@ -34,6 +42,7 @@ const App: FunctionComponent<IProps> = ({ thunkSendMessage }): JSX.Element => {
         <HeaderView />
         <Switch>
           <Route path="/" component={Elo} exact />
+          <Route path="/:id" component={Heyd} exact />
           <Route path="/favourite-offers" component={Heyd} />
           <Route path="/filters" component={Heyd} />
           <Route path="/languages" component={Heyf} />

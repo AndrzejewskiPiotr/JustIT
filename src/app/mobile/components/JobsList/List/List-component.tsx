@@ -19,19 +19,7 @@ const ListView: FunctionComponent<IProps> = ({ jobs }) => {
     style: React.CSSProperties;
   }) => {
     const job = jobs[index];
-    return (
-      <JobTab
-        style={style}
-        key={key}
-        id={job.id}
-        experience={job.experience_level}
-        title={job.title}
-        salaryFrom={job.salary_from}
-        salaryTo={job.salary_to}
-        logoUrl={job.company_logo_url}
-        currency={job.salary_currency}
-      />
-    );
+    return <JobTab style={style} key={key} id={job.id} jobData={job} />;
   };
   return (
     <Container>
