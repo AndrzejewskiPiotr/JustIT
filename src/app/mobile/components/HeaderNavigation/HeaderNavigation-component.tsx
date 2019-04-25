@@ -5,9 +5,9 @@ import Tabs from './Tab/Tab-component';
 
 const HeaderNavigation: FunctionComponent = (): JSX.Element => (
   <Container>
-    <Tabs to="/" text="job offers" classnameactive="active" />
+    <Tabs to={{ pathname: '/' }} text="job offers" classnameactive="active" />
     <Tabs
-      to="/favourite-offers"
+      to={{ pathname: '/favourite-offers' }}
       text="favourite offers"
       classnameactive="active"
     />

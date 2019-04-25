@@ -2,7 +2,7 @@ import React from 'react';
 import { Wrapper, Link } from './Tab-styled';
 
 interface IProps {
-  to: string;
+  to: { pathname: string; search?: string; state?: {} };
   text: string;
   classnameactive?: string;
 }
