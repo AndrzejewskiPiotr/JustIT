@@ -14,13 +14,13 @@ const BottomNavigation: FunctionComponent = (): JSX.Element => (
     <Tab text="Home" to={{ pathname: '/' }}>
       <HomeIcon />
     </Tab>
-    <Tab text="Filter" to={{ pathname: 'filters' }}>
+    <Tab text="Filter" to={{ pathname: '/filters' }}>
       <FilterIcon />
     </Tab>
-    <Tab text="Languages" to={{ pathname: 'languages' }}>
+    <Tab text="Languages" to={{ pathname: '/languages' }}>
       <LanguageIcon />
     </Tab>
-    <Tab text="Map" to={{ pathname: 'map' }}>
+    <Tab text="Map" to={{ pathname: '/map' }}>
       <WorldIcon />
     </Tab>
   </Container>
