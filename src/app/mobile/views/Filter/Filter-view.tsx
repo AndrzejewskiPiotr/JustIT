@@ -13,8 +13,19 @@ const FilterView: FunctionComponent = (): JSX.Element => (
       value={[0, 33]}
       dotStyle={{ width: '20px', height: '20px' }}
       handleStyle={[
-        { backgroundColor: '#764abc', borderColor: '#764abc', width: '26px', height: '26px' },
-        { backgroundColor: '#764abc', borderColor: '#764abc', width: '26px', height: '26px' }]}
+        {
+          backgroundColor: '#764abc',
+          borderColor: '#764abc',
+          width: '26px',
+          height: '26px',
+        },
+        {
+          backgroundColor: '#764abc',
+          borderColor: '#764abc',
+          width: '26px',
+          height: '26px',
+        },
+      ]}
       trackStyle={[{ backgroundColor: '#764abc', top: '10px' }]}
     />
   </Container>
