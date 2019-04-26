@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import filterReducer from 'redux/filters/filter-reducer'
+import filterReducer from 'redux/filters/filter-reducer';
 import jobsReducer from 'redux/jobs/jobs-reducer';
 
 const rootReducer = combineReducers({
