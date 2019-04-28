@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import HeaderView from 'mobile/views/Header/Header-view';
 import BottomNavigation from 'mobile/views/BottomNavigation/BottonNavigation-views';
 import FilterView from 'mobile/views/Filter/Filter-view';
+import Languages  from 'mobile/views/Languages/Languages-view';
 import JobsList from 'mobile/views/JobsList/JobsList-view';
 import JobDetail from 'mobile/views/JobDetail/JobDetail-view';
 import { Container } from './App-styled';
@@ -47,7 +48,7 @@ const App: FunctionComponent<IProps> = ({ thunkSendMessage }): JSX.Element => {
           <Route path="/offers/:id" component={JobDetail} exact />
           <Route path="/favourite-offers" component={Heyd} />
           <Route path="/filters" component={FilterView} />
-          <Route path="/languages" component={Heyf} />
+          <Route path="/languages" component={Languages} />
           <Route path="/map" component={Hey} />
           <Redirect from="*" to="/" />
         </Switch>
