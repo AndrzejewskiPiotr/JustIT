@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import CommonText from 'common/Text/Text';
 
-const Wrapper = styled.li`
+interface IProps {
+  isActive: boolean;
+}
+
+const Wrapper = styled.li<IProps>`
   flex: 1;
   display: flex;
   justify-content: center;
@@ -10,7 +14,7 @@ const Wrapper = styled.li`
   box-shadow: rgba(128, 128, 128, 0.5) 0 1px 4px 0;
   border-radius: 6px;
   margin: 12px;
-  border: 0;
+  border: ${props => (props.isActive ? '1px solid #673AB7' : '1px solid white')};
 `;
 
 const Text = styled(CommonText)`
