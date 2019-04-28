@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { Dispatch, FunctionComponent } from 'react';
 import {
   Container,
   Wrapper,
@@ -9,27 +9,50 @@ import {
   SalaryFrom,
 } from './RangeInput-styled';
 import CommonRangeInput from 'common/RangeInput/RangeInput-common';
+import { connect } from 'react-redux';
+import { AppState } from 'store/store';
+import { handleSalaryUpdate } from 'redux/filters/filter-actions';
+import {
+  ISalaryFilter,
+  FilterActionTypes,
+  IFilterState,
+} from 'redux/filters/filter-types';
 
-const RangeInput: FunctionComponent<any> = (): JSX.Element => (
+const mapStateToProps = (state: AppState) => ({
+  minSalary: state.filterReducer.minSalary,
+  maxSalary: state.filterReducer.maxSalary,
+});
+
+const mapDispatchToProps = (dispatch: Dispatch<FilterActionTypes>) => ({
+  handleSalaryUpdate: (data: IFilterState[]) =>
+    dispatch(handleSalaryUpdate(data)),
+});
+
+const RangeInput: FunctionComponent<any> = ({
+  minSalary,
+  maxSalary,
+  handleSalaryUpdate,
+}): JSX.Element => (
   <Container>
     <Title>Salary</Title>
     <Wrapper>
       <MarginWrapper>
         <CommonRangeInput
-          max={33}
-          min={0}
-          onChange={function dd(e: any) {
-            console.log(e);
-          }}
-          value={[0, 33]}
+          max={maxSalary}
+          min={minSalary}
+          onChange={handleSalaryUpdate}
+          value={[minSalary, maxSalary]}
         />
       </MarginWrapper>
       <SalaryWrapper>
-        <SalaryTo text="0k" />
-        <SalaryFrom text="33k" />
+        <SalaryTo text={`${minSalary}k`} />
+        <SalaryFrom text={`${maxSalary}k`} />
       </SalaryWrapper>
     </Wrapper>
   </Container>
 );
 
-export default RangeInput;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(RangeInput);

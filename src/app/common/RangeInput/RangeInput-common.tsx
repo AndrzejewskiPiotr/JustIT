@@ -23,11 +23,10 @@ const CommonRangeInput: FunctionComponent<IProps> = ({
   value,
 }): JSX.Element => (
   <Range
-    pushable
-    onChange={e => onChange(e)}
+    onChange={onChange}
     min={0}
-    max={33}
-    value={[0, 33]}
+    max={35}
+    value={value}
     dotStyle={{ width: '20px', height: '20px' }}
     railStyle={{ top: '10px' }}
     handleStyle={[
