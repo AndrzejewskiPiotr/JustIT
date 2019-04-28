@@ -3,8 +3,10 @@ import thunkMiddleware from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import filterReducer from 'redux/filters/filter-reducer';
 import jobsReducer from 'redux/jobs/jobs-reducer';
+import filterLanguageReducer from 'redux/languages/languages-reducer';
 
 const rootReducer = combineReducers({
+  filterLanguageReducer,
   jobsReducer,
   filterReducer,
 });
