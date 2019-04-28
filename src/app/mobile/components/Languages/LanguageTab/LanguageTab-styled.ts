@@ -14,7 +14,8 @@ const Wrapper = styled.li<IProps>`
   box-shadow: rgba(128, 128, 128, 0.5) 0 1px 4px 0;
   border-radius: 6px;
   margin: 12px;
-  border: ${props => (props.isActive ? '1px solid #673AB7' : '1px solid white')};
+  border: ${props =>
+    props.isActive ? '1px solid #673AB7' : '1px solid white'};
 `;
 
 const Text = styled(CommonText)`
