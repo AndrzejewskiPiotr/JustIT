@@ -9,7 +9,7 @@ const LanguagesReducer = (state = initialState, action: any) => {
     case UPDATE_LANGUAGE_FILTER:
       const filters = state.languagesFilter.includes(action.data)
         ? state.languagesFilter.filter((lan: string) => lan !== action.data)
-        : state.languagesFilter.push(action.data);
+        : state.languagesFilter.concat(action.data);
       return {
         ...state,
         languagesFilter: filters,

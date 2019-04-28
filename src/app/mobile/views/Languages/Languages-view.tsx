@@ -4,7 +4,7 @@ import { Container } from './Languages-styled';
 
 const Languages = ['java', 'ruby', 'php'];
 
-const LanguagesView: FunctionComponent<{}> = () => (
+const LanguagesView: FunctionComponent<{}> = (): JSX.Element => (
   <Container>
     <LanguagesList languages={Languages} />
   </Container>
