@@ -38,7 +38,10 @@ const Detail: FunctionComponent<any> = ({ data }) => {
           <CompanyExperience text={experience_level} heading="EXP.lvl" />
         </Row>
         <Row>
-          <CompanyEmploymentType text={`${street}, ${city}`} heading="address" />
+          <CompanyEmploymentType
+            text={`${street}, ${city}`}
+            heading="address"
+          />
           <CompanyExperience
             text={`${salary_from} - ${salary_to} ${salary_currency}`}
             heading="Salary"

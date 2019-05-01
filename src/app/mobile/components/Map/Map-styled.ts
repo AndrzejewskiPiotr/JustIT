@@ -5,7 +5,7 @@ const Container = styled.div`
 
   & .leaflet-container {
     width: 100%;
-    height: calc(100vh - 185px);
+    height: calc(100vh - 135px);
   }
 `;
 
