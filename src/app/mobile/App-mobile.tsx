@@ -5,6 +5,7 @@ import HeaderView from 'mobile/views/Header/Header-view';
 import BottomNavigation from 'mobile/views/BottomNavigation/BottonNavigation-views';
 import FilterView from 'mobile/views/Filter/Filter-view';
 import Languages from 'mobile/views/Languages/Languages-view';
+import SimpleExample from 'mobile/views/Map/Map-view';
 import JobsList from 'mobile/views/JobsList/JobsList-view';
 import JobDetail from 'mobile/views/JobDetail/JobDetail-view';
 import { Container } from './App-styled';
@@ -27,8 +28,6 @@ const Heyd = ({ match }: RouteComponentProps<IMatchParams>) => {
   return <div>czzx</div>;
 };
 
-const Hey = () => <div>map</div>;
-
 interface IProps {
   thunkSendMessage: () => any;
 }
@@ -49,7 +48,7 @@ const App: FunctionComponent<IProps> = ({ thunkSendMessage }): JSX.Element => {
           <Route path="/favourite-offers" component={Heyd} />
           <Route path="/filters" component={FilterView} />
           <Route path="/languages" component={Languages} />
-          <Route path="/map" component={Hey} />
+          <Route path="/map" component={SimpleExample} />
           <Redirect from="*" to="/" />
         </Switch>
         <BottomNavigation />
